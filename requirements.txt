@@ -2,6 +2,5 @@ openai==1.59.9
 python-dotenv==1.0.1
 ipykernel==6.29.5
 streamlit==1.41.1
-streamlit_webrtc==0.47.9
 moviepy==2.1.2
 pydub==0.25.1

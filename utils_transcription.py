@@ -26,9 +26,7 @@ def video_to_text(file, prompt):
         return transcription
     return ""
 
-def audio_record():
-    with sr.Microphone() as source:
-        print('Ouvindo...')
-        recognizer.adjust_for_ambient_noise(source, duration=1)
-        audio = recognizer.listen(source)
-    return audio
+def voice_to_text(file, prompt):
+    return audio_transcriptions(file=file,
+                                prompt=prompt,
+                                language="pt")

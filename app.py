@@ -1,5 +1,5 @@
 import streamlit as st
-from utils_transcription import audio_to_text, video_to_text
+from utils_transcription import audio_to_text, video_to_text, voice_to_text
 
 def page_audio(tab):
     input_prompt = tab.text_input("Type your prompt (optional)", key="prompt_audio")
@@ -9,6 +9,10 @@ def page_audio(tab):
 
 def page_mic(tab):
     input_prompt = tab.text_input("Type your prompt (optional)", key="prompt_mic")
+    audio_value = tab.audio_input("Record a voice message")
+    if audio_value:
+        tab.audio(audio_value)
+        transcription_markdown(tab, voice_to_text(audio_value,input_prompt))
 
 def page_video(tab):
     input_prompt = tab.text_input("Type your prompt (optional)", key="prompt_video")

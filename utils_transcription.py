@@ -1,3 +1,4 @@
+import streamlit as st
 from pathlib import Path
 from moviepy import VideoFileClip
 from utils_openai import audio_transcriptions
@@ -10,7 +11,9 @@ FILE_VIDEO = PATH_TEMP/"video.mp3"
 def audio_to_text(file, prompt):
     return audio_transcriptions(file=file,
                                 prompt=prompt,
-                                language="pt")
+                                api_key=st.session_state["api_key"],
+                                model=st.session_state["model"],
+                                language=st.session_state["language"])
 
 def video_to_text(file, prompt):
     with open(FILE_VIDEO, "wb") as f:
@@ -22,11 +25,15 @@ def video_to_text(file, prompt):
     with open(FILE_AUDIO, "rb") as f:
         transcription = audio_transcriptions(file=FILE_AUDIO,
                                             prompt=prompt,
-                                            language="pt")
+                                            api_key=st.session_state["api_key"],
+                                            model=st.session_state["model"],
+                                            language=st.session_state["language"])
         return transcription
     return ""
 
 def voice_to_text(file, prompt):
     return audio_transcriptions(file=file,
                                 prompt=prompt,
-                                language="pt")
+                                api_key=st.session_state["api_key"],
+                                model=st.session_state["model"],
+                                language=st.session_state["language"])

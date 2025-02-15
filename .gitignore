@@ -281,6 +281,7 @@ pyrightconfig.json
 .ionide
 
 # Paths
+configs/
 temp/
 
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode,pycharm+all

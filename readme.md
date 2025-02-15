@@ -1,5 +1,12 @@
 # Transcriptions with OpenAI and Streamlit
 
-- [Leticia's Chatbot](https://leticiapillar-transcripts-openai-app.streamlit.app/)
 
-- [Course: Asimov Transcripts – Transcrevendo áudios com a API do ChatGPT](https://hub.asimov.academy/projeto/atividade/transcrevendo-arquivos-de-video/)
+Simple web-app using Streamlit and OpenAI API to transcript audio, videos and voide recorded.
+
+- Link for [Leticia's Transcriptions](https://leticiapillar-transcripts-openai-app.streamlit.app/) application
+
+
+#### Stack
+- [Python](https://www.python.org/)
+- [Streamlit](https://streamlit.io/)
+- [OpenAI API](https://openai.com/index/openai-api/)
